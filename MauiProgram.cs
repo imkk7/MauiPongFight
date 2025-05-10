@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using CommunityToolkit.Maui.Markup;
 
 namespace PongFight
 {
@@ -13,7 +14,8 @@ namespace PongFight
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-                });
+                })
+                .UseMauiCommunityToolkitMarkup();
 
 #if DEBUG
     		builder.Logging.AddDebug();
