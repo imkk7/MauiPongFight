@@ -1,5 +1,4 @@
 ﻿using Microsoft.Extensions.Logging;
-using CommunityToolkit.Maui.Markup;
 
 namespace PongFight
 {
@@ -20,6 +19,8 @@ namespace PongFight
 #if DEBUG
     		builder.Logging.AddDebug();
 #endif
+            builder.Services.AddTransient<GameViewModel>();
+            builder.Services.AddTransient<GamePage>();
 
             return builder.Build();
         }
